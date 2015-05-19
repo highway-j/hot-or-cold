@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-  alert("Hey Rupesh - I can't seem to get my relative feedback function to work. Could you look into that for me? Also, somehow my keydown function for pressing Enter is running even though I commented it out. The alerts were popping up twice before this.")
+  alert("Hey Rupesh, I can't seem to get my relative feedback function to work. Could you look into that for me? Also, somehow my keydown function for pressing Enter is running even though I commented it out. The alerts were popping up twice before this.")
 
 	// Pick Random Number 1-100, Set default values
 	var chosen = Math.floor((Math.random() * 100) + 1);
