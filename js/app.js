@@ -38,6 +38,11 @@ $(document).ready(function(){
     $('html').css('background-color', '#00ff00');
   };
 
+  var winRemove = function(){
+    $('body').css('background-color', '#1F253D');
+    $('html').css('background-color', '#394264');
+  };
+
   var realGuesser = function(){
     realGuess = parseInt($('#userGuess').val());
     var guessRange = (Math.abs(realGuess - chosen));
@@ -51,22 +56,27 @@ $(document).ready(function(){
           removeHint();
           giveHint(hint.same);
           redZoneRemove();
+          winRemove();
       } else if(guessRange < previousRange && guessRange > 5){
           removeHint();
           giveHint(hint.closer);
           redZoneRemove();
+          winRemove();
       } else if(guessRange > previousRange && guessRange > 5){
           removeHint();
           giveHint(hint.farther);
           redZoneRemove();
+          winRemove();
       } else if(guessRange > 25 && guessRange < 50){
           removeHint();
           giveHint(hint.tryAgain);
           redZoneRemove();
+          winRemove();
       } else if(guessRange < 5 && realGuess != chosen){
           removeHint();
           giveHint(hint.redZone);
           redZoneClass();
+          winRemove();
       }
     } else {
       alert("You just wasted a guess! Enter a number between 1 - 100.");
@@ -93,6 +103,8 @@ $(document).ready(function(){
     $('#feedback p').remove(0);
     $('input#userGuess').val('');
     $('#guessList li').remove();
+    winRemove();
+    redZoneRemove();
   	};
 
   	// Reset Game
