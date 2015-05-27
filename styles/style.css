@@ -323,3 +323,12 @@ ul.guessBox li {
 #feedback p, #feedback2 p {
 	font-size: 1em;
 }
+
+.redZone {
+	background-color: #FF0000;
+
+}
+
+.black {
+	background-color: #000000;
+}
