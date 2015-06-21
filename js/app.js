@@ -26,6 +26,7 @@ $(document).ready(function(){
   var redZoneClass = function(){
     $('body').css('background-color', '#000000');
     $('html').css('background-color', '#FF0000');
+    $('#feedback').css('background-color', '#FF0000');
   };
 
   var redZoneRemove = function(){
@@ -77,6 +78,7 @@ $(document).ready(function(){
           giveHint(hint.redZone);
           redZoneClass();
           winRemove();
+          redZoneClass();
       }
     } else {
       alert("You just wasted a guess! Enter a number between 1 - 100.");
